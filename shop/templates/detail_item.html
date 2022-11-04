@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>{{ item.name }}</h1>
+
+<form>
+    {% csrf_token %}
+    {% for purchase in item.purchase_set.all %}
+    <h2>Name : {{ purchase}}</h2>
+
+        {% endfor %}
+</form>
+
+</body>
+</html>
